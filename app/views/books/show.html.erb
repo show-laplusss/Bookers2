@@ -4,8 +4,7 @@
     <p><%= @book.body %></p>
     <p><%= image_tag @book.user.get_profile_image(100,100) %></p>
     <p><%= @book.user.name %></p>
-    <p><%= @book.created_at.strftime('%Y/%m/%d') %></p>
     <% if @book.user == current_user %>
-      <%= link_to "Destroy", post_image_path(@book),method: :delete %>
+      <%= link_to "Destroy", book_path(@book),method: :delete %>
       <% end %>
 </div>
